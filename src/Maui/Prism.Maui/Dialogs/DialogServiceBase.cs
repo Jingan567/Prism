@@ -1,4 +1,4 @@
-﻿using Prism.Commands;
+using Prism.Commands;
 using Prism.Common;
 using Prism.Dialogs.Xaml;
 using Prism.Mvvm;
@@ -82,7 +82,7 @@ public abstract class DialogServiceBase : IDialogService
                 }
             }
 
-            DialogUtilities.InitializeListener(dialogAware, DialogAware_RequestClose);
+            DialogUtilities.InitializeListener(dialogAware, DialogAware_RequestClose);//就应该是在这个方法里面初始化RequestClose
 
             dialogAware.OnDialogOpened(parameters);
 
